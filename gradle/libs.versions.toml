@@ -1,0 +1,29 @@
+[versions]
+android-minSdk = "21"
+android-compileSdk = "34"
+android-targetSdk = "34"
+android-ndkVersion = "27.0.11902837"
+android-versionCode = "1"
+lib-version = "1.0.0-alpha01"
+
+agp = "8.6.0-alpha08"
+kotlin = "2.0.20-Beta1"
+
+activity = "1.9.0"
+collection = "1.4.0"
+composeBom = "2024.06.00"
+
+[libraries]
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity" }
+androidx-collection = { group = "androidx.collection", name = "collection", version.ref = "collection" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
