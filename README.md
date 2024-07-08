@@ -25,7 +25,7 @@ allprojects {
     }
 }
 
-implementation("com.github.Kyant0:hct:1.0.0-alpha01")
+implementation("com.github.Kyant0:HCT:<version>")
 ```
 
 - Initialize the library
