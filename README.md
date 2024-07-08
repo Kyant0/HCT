@@ -1,8 +1,9 @@
 # HCT
 
-Another yet high performance HCT color space and dynamic theme library for Android Jetpack Compose.
+Another yet high performance **HCT (Kyant)** color space and **dynamic color scheme** library for Android Jetpack
+Compose.
 
-Compared to the Google's HCT, the HCT (Kyant) color system has the following advantages:
+Compared to the Google's HCT, the HCT color system has the following advantages:
 
 - It supports the P3 color space
 - It doesn't have the blue-purple shift issue
