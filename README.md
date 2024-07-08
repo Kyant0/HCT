@@ -1,4 +1,4 @@
-# HCT
+# HCT (Kyant)
 
 Another yet high performance **HCT (Kyant)** color space and **dynamic color scheme** library for Android Jetpack
 Compose.
