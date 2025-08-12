@@ -1,0 +1,25 @@
+[package]
+name = "hct"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+jni-sys = "0.4.0"
+
+[profile.dev]
+
+[profile.release]
+opt-level = 3
+strip = true
+codegen-units = 1
+lto = true
+panic = "abort"
+
+[profile.test]
+opt-level = 2
+overflow-checks = true
+
+[profile.bench]
