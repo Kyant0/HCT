@@ -15,8 +15,8 @@ dependencyResolutionManagement {
 }
 
 // build.gradle.kts in module
-implementation("com.github.Kyant0:hct:<version>") // common code only
-implementation("com.github.Kyant0:hct-compose:<version>")
+implementation("com.github.Kyant0.HCT:hct:<version>") // common code only
+implementation("com.github.Kyant0.HCT:hct-compose:<version>")
 ```
 
 ## Usages
