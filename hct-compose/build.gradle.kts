@@ -39,10 +39,29 @@ android {
     buildFeatures {
         compose = true
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
     api(project(":hct"))
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.ui.graphics)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.kyant"
+                artifactId = "hct-compose"
+                version = "1.0.0"
+            }
+        }
+    }
 }
