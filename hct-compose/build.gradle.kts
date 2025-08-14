@@ -60,7 +60,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.kyant"
                 artifactId = "hct-compose"
-                version = "1.0.0"
+                version = "1.0.1"
             }
         }
     }
