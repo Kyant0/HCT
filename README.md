@@ -4,19 +4,13 @@ Google HCT color space library for Android
 
 ## Installation
 
-[![JitPack Release](https://jitpack.io/v/Kyant0/HCT.svg)](https://jitpack.io/#Kyant0/HCT)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.kyant0/hct)](https://central.sonatype.com/artifact/io.github.kyant0/hct)
+
+In build.gradle.kts, add
 
 ```kotlin
-// settings.gradle.kts in root project
-dependencyResolutionManagement {
-    repositories {
-        maven("https://jitpack.io")
-    }
-}
-
-// build.gradle.kts in module
-implementation("com.github.Kyant0.HCT:hct:<version>") // common code only
-implementation("com.github.Kyant0.HCT:hct-compose:<version>")
+implementation("io.github.kyant0.hct:hct:<version>") // common code only
+implementation("io.github.kyant0.hct:hct-compose:<version>") // with Jetpack Compose extensions
 ```
 
 ## Usages

@@ -1,12 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
-    `maven-publish`
+    id("com.vanniktech.maven.publish")
 }
 
 android {
     namespace = "com.kyant.hct"
     compileSdk = 36
-    buildToolsVersion = "36.0.0"
+    buildToolsVersion = "36.1.0"
 
     defaultConfig {
         minSdk = 21
@@ -24,23 +24,37 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.kyant"
-                artifactId = "hct"
-                version = "1.0.1"
+mavenPublishing {
+    publishToMavenCentral()
+    signAllPublications()
+
+    coordinates("io.github.kyant0.hct", "hct", "1.0.2")
+
+    pom {
+        name.set("HCT")
+        description.set("Google HCT color space library for Android")
+        inceptionYear.set("2025")
+        url.set("https://github.com/Kyant0/HCT")
+        licenses {
+            license {
+                name.set("The Apache License, Version 2.0")
+                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                distribution.set("repo")
             }
+        }
+        developers {
+            developer {
+                id.set("Kyant0")
+                name.set("Kyant")
+                url.set("https://github.com/Kyant0")
+            }
+        }
+        scm {
+            url.set("https://github.com/Kyant0/HCT")
+            connection.set("scm:git:git://github.com/Kyant0/HCT.git")
+            developerConnection.set("scm:git:ssh://git@github.com/Kyant0/HCT.git")
         }
     }
 }
