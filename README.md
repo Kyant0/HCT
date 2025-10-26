@@ -4,7 +4,7 @@ Google HCT color space library for Android
 
 ## Installation
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.kyant0/hct)](https://central.sonatype.com/artifact/io.github.kyant0/hct)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.kyant0.hct/hct)](https://central.sonatype.com/artifact/io.github.kyant0.hct/hct)
 
 In build.gradle.kts, add
 
